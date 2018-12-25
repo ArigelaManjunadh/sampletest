@@ -74,10 +74,30 @@ task stampRelease {
                 def version = project.version.toString()
 
                 def release = new File("${projectDir}/src/main/resources/public/release.gsp")
-
-                release.write("--- Build Date and Time:  ${now} ----build version : ${version}")
-
-               
+				//def unknownValue = 'UNKNOWN'
+				//def bn = System.getenv('BUILD_NUMBER')
+				// def buildNumberEnvironment = 'BUILD_NUMBER'
+				//def buildNumberProperty = 'build.number'
+				//def buildNumber = System.getenv(buildNumberEnvironment)
+				//if (!buildNumber) {
+					//				buildNumber = System.getProperty(buildNumberProperty, unknownValue)
+						//			}
+						//def buildNumber=System.getenv(
+                release.write("--- Build Date and Time:  ${now} ----build version : ${version}--${build.number}")
+				
+				
+				
+	//def config=new HashMap()
+	//def envVarsMap=build.parent.build[0].properties.get("envVars")
+	//config.putAll(envVarsMap)
+	//def jobName=config.get("JOB_NAME")
+	//def jobURL=build.envVars.BUILD_URL
+	//config.putAll(envVarsMap)
+	//config.putAll(build)
+	//String noofjob=config.get("jobName")
+	//String buildnumber=config.get(buildNumber)
+	//String bn=${ BUILD_NUMBER}
+	//println(bn)
 
 }
 

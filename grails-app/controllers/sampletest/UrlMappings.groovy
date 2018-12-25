@@ -13,5 +13,7 @@ class UrlMappings {
         "500"(view:'/error')
         "404"(view:'/notFound')
 		"/release"(view:'/src/main/resources/public/release.gsp')
+		
+		
     }
 }
