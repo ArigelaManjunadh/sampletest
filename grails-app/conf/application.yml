@@ -13,7 +13,7 @@ info:
         name: '@info.app.name@'
         version: '@info.app.version@'
         grailsVersion: '@info.app.grailsVersion@'
-        build-number: '@info.app.build-number@'
+        
 spring:
     main:
         banner-mode: "off"
