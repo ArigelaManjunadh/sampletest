@@ -82,8 +82,8 @@ task stampRelease {
 				//if (!buildNumber) {
 					//				buildNumber = System.getProperty(buildNumberProperty, unknownValue)
 						//			}
-						//def buildNumber=System.getenv(
-                release.write("--- Build Date and Time:  ${now} ----build version : ${version}--${build.number}")
+						//def buildNumber=System.getenv
+                release.write("--- Build Date and Time:  ${now} ----build version : ${version}--${BUILD_NUMBER}")
 				
 				
 				
