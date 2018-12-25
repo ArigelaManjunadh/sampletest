@@ -70,21 +70,9 @@ bootRun {
 task stampRelease {
 
                 def now = new Date().format('dd/MMM/yyyy; kk:mm:ss')
-
-                def version = project.version.toString()
-
                 def release = new File("${projectDir}/src/main/resources/public/release.gsp")
-				//def unknownValue = 'UNKNOWN'
-				//def unknownValue = 'UNKNOWN'
-				//def bn = System.getenv('BUILD_NUMBER')
-				// def buildNumberEnvironment = 'BUILD_NUMBER'
-				def buildNumberProperty = 'build.number'
-				//def buildNumber = System.getenv(buildNumberEnvironment)
-				//if (!buildNumber) {
-					//				buildNumber = System.getProperty(buildNumberProperty, unknownValue)
-						//			}
-						//def buildNumber=System.getenv
-                release.write("--- Build Date and Time:  ${now} ----build version : ${version}--${buildNumberProperty}")
+				def buildNumberProperty = System.getProperty("build.number")
+                release.write("--- Build Date and Time:  ${now} ----build version :${buildNumberProperty}")
 				
 				
 				

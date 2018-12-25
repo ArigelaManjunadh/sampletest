@@ -1,1 +1,0 @@
-<g:meta name="buildnumber"/>
