@@ -71,7 +71,7 @@ task stampRelease {
 
                 def now = new Date().format('dd/MMM/yyyy; kk:mm:ss')
                 def release = new File("${projectDir}/src/main/resources/public/release.gsp")
-				def buildNumberProperty = System.getProperty("build.number")
+				def buildNumberProperty = System.getProperty('build.number')
                 release.write("--- Build Date and Time:  ${now} ----build version :${buildNumberProperty}")
 				
 				
@@ -85,8 +85,9 @@ task stampRelease {
 	//config.putAll(build)
 	//String noofjob=config.get("jobName")
 	//String buildnumber=config.get(buildNumber)
-	//String bn=${ BUILD_NUMBER}
+	//String bn=${BUILD_NUMBER}
 	//println(bn)
+	println("bn'+${env.BUILD_NUMBER})
 
 }
 
