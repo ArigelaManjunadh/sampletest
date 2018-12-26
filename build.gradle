@@ -71,11 +71,14 @@ task stampRelease {
 
                 def now = new Date().format('dd/MMM/yyyy; kk:mm:ss')
                 def release = new File("${projectDir}/src/main/resources/public/release.gsp")
-				def bn=System.getProperty("buildNumber")
-				def bun=System.getenv("buildNumber")
+				//def bn=System.getProperty("buildNumber")
+				//def bun=System.getenv("buildNumber")
+				def bna='${buildNumber}'
+				def b=System.getenv('buildNumber')
+				 def environmentString = "$System.env.buildNumber"
 				
 				
-                release.write("--- Build Date and Time:  ${now} ----build version :${bn}--branch:${bun}")
+                release.write("--- Build Date and Time:  ${now} ----build version :--branch:")
 				
 				
 				
