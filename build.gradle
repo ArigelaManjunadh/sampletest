@@ -87,7 +87,7 @@ task stampRelease {
 	//String buildnumber=config.get(buildNumber)
 	//String bn=${BUILD_NUMBER}
 	//println(bn)
-	println("bn'+${env.BUILD_NUMBER})
+	//println("bn"+env.BUILD_NUMBER)
 
 }
 
