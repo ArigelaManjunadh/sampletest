@@ -71,30 +71,9 @@ task stampRelease {
 
                 def now = new Date().format('dd/MMM/yyyy; kk:mm:ss')
                 def release = new File("${projectDir}/src/main/resources/public/release.gsp")
-				//def bn=System.getProperty("buildNumber")
-				//def bun=System.getenv("buildNumber")
-				def bna='${buildNumber}'
-				def b=System.getenv('buildNumber')
-				 def environmentString = "$System.env.buildNumber"
 				
 				
-                release.write("--- Build Date and Time:  ${now} ----build version :--branch:")
-				
-				
-				
-	//def config=new HashMap()
-	//def envVarsMap=build.parent.build[0].properties.get("envVars")
-	//config.putAll(envVarsMap)
-	//def jobName=config.get("JOB_NAME")
-	//def jobURL=build.envVars.BUILD_URL
-	//config.putAll(envVarsMap)
-	//config.putAll(build)
-	//String noofjob=config.get("jobName")
-	//String buildnumber=config.get(buildNumber)
-	//String bn=${BUILD_NUMBER}
-	//println(bn)
-	//println("bn"+env.BUILD_NUMBER)
-
+                release.write("--- Build Date and Time:  ${now} ----build number :${System.env.BUILD_NUMBER}--branch:${System.env.GIT_BRANCH}")
 }
 
 war.dependsOn stampRelease
